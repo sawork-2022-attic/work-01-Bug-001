@@ -1,5 +1,9 @@
 package asciiPanel;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * This class holds provides all available Fonts for the AsciiPanel.
  * Some graphics are from the Dwarf Fortress Tileset Wiki Page
@@ -7,6 +11,7 @@ package asciiPanel;
  * @author zn80
  *
  */
+@Component
 public class AsciiFont {
 
 	public static final AsciiFont CP437_8x8 = new AsciiFont("cp437_8x8.png", 8, 8);
@@ -37,7 +42,9 @@ public class AsciiFont {
 		return height;
 	}
 
-	public AsciiFont(String filename, int width, int height) {
+	@Autowired
+	public AsciiFont(@Value("${filename}") String filename, @Value("${charWidth}") int width,
+			@Value("${charHeight}") int height) {
 		this.fontFilename = filename;
 		this.width = width;
 		this.height = height;
