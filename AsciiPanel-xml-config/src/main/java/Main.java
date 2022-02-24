@@ -12,7 +12,7 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 
         AsciiPanel asciiPanel = context.getBean("panel", AsciiPanel.class);
-        asciiPanel.setSize(800, 240);
+        asciiPanel.setSize(80, 24);
 
         for (int i = 0; i < 24; i++) {
             asciiPanel.write("Hello, world!", 0, i);
