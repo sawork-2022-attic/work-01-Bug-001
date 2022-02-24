@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="panel" class="asciiPanel.AsciiPanel">
+        <constructor-arg value="80"></constructor-arg>
+        <constructor-arg value="24"></constructor-arg>
+        <constructor-arg ref="font-cp437_9x16"></constructor-arg>
+    </bean>
+
+    <bean id="font-cp437_8x8" class="asciiPanel.AsciiFont">
+        <constructor-arg value="cp437_8x8.png"></constructor-arg>
+        <constructor-arg value="8"></constructor-arg>
+        <constructor-arg value="8"></constructor-arg>
+    </bean>
+
+    <bean id="font-cp437_10x10" class="asciiPanel.AsciiFont">
+        <constructor-arg value="cp437_10x10.png"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+    </bean>
+
+    <bean id="font-cp437_12x12" class="asciiPanel.AsciiFont">
+        <constructor-arg value="cp437_12x12.png"></constructor-arg>
+        <constructor-arg value="12"></constructor-arg>
+        <constructor-arg value="12"></constructor-arg>
+    </bean>
+
+    <bean id="font-cp437_16x16" class="asciiPanel.AsciiFont">
+        <constructor-arg value="cp437_16x16.png"></constructor-arg>
+        <constructor-arg value="16"></constructor-arg>
+        <constructor-arg value="16"></constructor-arg>
+    </bean>
+
+    <bean id="font-cp437_9x16" class="asciiPanel.AsciiFont">
+        <constructor-arg value="cp437_9x16.png"></constructor-arg>
+        <constructor-arg value="9"></constructor-arg>
+        <constructor-arg value="16"></constructor-arg>
+    </bean>
+
+    <bean id="font-drake_10x10" class="asciiPanel.AsciiFont">
+        <constructor-arg value="drake_10x10.png"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+    </bean>
+
+    <bean id="font-taffer_10x10" class="asciiPanel.AsciiFont">
+        <constructor-arg value="taffer_10x10.png"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+    </bean>
+
+    <bean id="font-qbicfeet_10x10" class="asciiPanel.AsciiFont">
+        <constructor-arg value="qbicfeet_10x10.png"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+        <constructor-arg value="10"></constructor-arg>
+    </bean>
+
+    <bean id="font-talryth_square_15x15" class="asciiPanel.AsciiFont">
+        <constructor-arg value="talryth_square_15x15.png"></constructor-arg>
+        <constructor-arg value="15"></constructor-arg>
+        <constructor-arg value="15"></constructor-arg>
+    </bean>
+
+</beans>
