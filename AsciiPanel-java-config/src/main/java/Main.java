@@ -13,7 +13,6 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(AsciiPanelConfig.class);
 
         AsciiPanel asciiPanel = context.getBean(AsciiPanel.class);
-        asciiPanel.setSize(80, 24);
 
         for (int i = 0; i < 24; i++) {
             asciiPanel.write("Hello, world!", 0, i);
