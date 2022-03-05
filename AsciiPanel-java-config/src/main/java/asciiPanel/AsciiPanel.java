@@ -12,10 +12,14 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * This simulates a code page 437 ASCII terminal display.
  * @author Trystan Spangler
  */
+@Component
 public class AsciiPanel extends JPanel {
 	private static final long serialVersionUID = -4167851861147593092L;
 
@@ -118,6 +122,7 @@ public class AsciiPanel extends JPanel {
     private char[][] oldChars;
     private Color[][] oldBackgroundColors;
     private Color[][] oldForegroundColors;
+    @Autowired
     private AsciiFont asciiFont;
 
     /**
@@ -330,7 +335,7 @@ public class AsciiPanel extends JPanel {
         oldForegroundColors = new Color[widthInCharacters][heightInCharacters];
 
         if(font == null) {
-        	font = AsciiFont.CP437_9x16;
+        	// font = AsciiFont.CP437_9x16;
         }
         setAsciiFont(font);
     }
